@@ -1,0 +1,17 @@
+include tamplates/layout
+
+.container
+	#glide(class="glide")
+		.glide__wrapper
+			.glide_track(data-glide-el="track")
+				ul.glide__slides
+					each image, i in imagesData.imagesPath
+						li.glide__slide
+							img(src=image, alt=image, class='')
+		div(class="glide__bullets" data-glide-el="controls[nav]")
+			button(class="glide__bullet" data-glide-dir="=0")
+			button(class="glide__bullet" 
+			data-glide-dir="=1")
+			button(class="glide__bullet" data-glide-dir="=2")
+script(src='js/carousel.js')
+include includes/footer.pug

@@ -1,0 +1,59 @@
+include tamplates/layout
+.container
+    .sections
+        if result === "success"
+            .msg(id="alert-success")
+                p= msg
+        else if result === "error"
+            .msg(id="alert-error")
+                p=msg        
+        h1 Napisz do nas
+        form( action="/contact" method="post" id="contact-form")
+            .wave-group 
+                input(required="" type="text" class="input" name="title")
+                span(class="bar")
+                label(class="label")
+                    each val, index in ['T', "E", "M", "A", "T"]
+                        span(class="label-char" style=`--index: ${index}`)= val  
+
+            .wave-group 
+                textarea(required="" type="text" class="input" name="message")
+                span(class="bar")
+                label(class="label")
+                    each val, index in ['W', "I", "A", "D", "O", "M", "O", "Ś", "C", "I"]
+                        span(class="label-char" style=`--index: ${index}`)= val 
+
+            .contact-label-grup
+                .wave-group 
+                    input(required="" type="email" class="input" name="email")
+                    span(class="bar")
+                    label(class="label")
+                        each val, index in ['E', "-", "M", "A", "I", "L"]
+                            span(class="label-char" style=`--index: ${index}`)= val 
+
+                .wave-group 
+                    input(required="" type="tel" class="input" name="tel")
+                    span(class="bar")
+                    label(class="label")
+                        each val, index in ['N', "U", "M", "E", "R",]
+                            span(class="label-char" style=`--index: ${index}`)= val 
+                        span(class="label-char" style=`--index: 5`) &nbsp; 
+                        each val, index in ["T", "E", "L", "E", "F", "O", "N", "U"]
+                            span(class="label-char" style=`--index: ${index+6}`)= val 
+
+            .contact-label-grup
+                .wave-group 
+                    input(required="" type="text" class="input" name="name")
+                    span(class="bar")
+                    label(class="label")
+                        each val, index in ['I', "M", "I", "Ę",]
+                            span(class="label-char" style=`--index: ${index}`)= val   
+                        span(class="label-char" style="--index: 4") &nbsp;  
+                        span(class="label-char" style="--index: 5") I
+                        span(class="label-char" style="--index: 6") &nbsp; 
+                        each val, index in ['N', "A", "Z", "W", "I", "S", "K", "O"]
+                            span(class="label-char" style=`--index: ${index+7}`)= val 
+
+                button(class="btn") Wyślij!     
+
+        

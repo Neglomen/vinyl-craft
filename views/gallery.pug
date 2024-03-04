@@ -1,0 +1,22 @@
+include tamplates/layout
+
+.container
+	each val, locationIndex in galleryData    
+		.realization
+		p(class="section-title") #{val.place} 
+			figure(aria-labelledby="section-title")
+				.images
+					each image in val.images
+						.img-container
+							img(src=`${image}`,alt=val.location, loading="lazy")
+.slider
+	.slider-images
+		.slider-close(onclick=`closeSlider()`) ╳
+		.slider-left(onclick=`prevImage()`)
+		.slider-right(onclick=`nextImage()`)
+		.slider-title tytuł
+		each val, locationIndex in galleryData
+			each image,index in val.images
+				.slider-image
+script(src='js/gallery.js')
+include includes/footer.pug 

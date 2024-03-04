@@ -1,0 +1,18 @@
+.glide__slide > img {
+	display: block;
+	width: 100%;
+	height: 86vh;
+	object-fit: cover;
+  }
+  .glide__bullet{
+	width: 19px;
+    height: 19px;
+	box-shadow: inset 0 0 2px 1px #b08c68;
+  }
+
+  @media screen and (max-width: 500px) {
+	.glide__arrows {
+	  display: none;
+	}
+  }
+  

@@ -1,0 +1,42 @@
+nav.main-nav
+  .logo
+    img(defer src="images/logo.png")
+  .main-nav-menu
+    .main-nav-element
+      a(href="/") home
+    .main-nav-element
+      a(href="/about") o nas
+    .main-nav-element
+      a(href="/realizacje") realizacje
+    .main-nav-element
+      a(href="/offer") oferta
+    .main-nav-element
+      a(href="/contact") kontakt
+    .main-nav-element
+      img(class="phon-icon" src="images/phone-icon.svg")
+      span 724 492 189
+
+nav(class="mobile-nav" id="mobile-nav")
+  .hamburger(id="hamburger" onClick="toggleMenu()")
+    img(class ="hamburger-icon" src="images/hamburger-menu.png") 
+  img(src="images/logo.png")
+
+nav(id="sidebar-menu")
+  .logo
+    img(src="images/logo-hamburger.jpg")
+  .topnav
+    .menuItem
+      a(href="/") home
+    .menuItem
+      a(href="/about") o nas
+    .menuItem
+      a(href="/realizacje") realizacje
+    .menuItem
+      a(href="/offer") oferta
+    .menuItem
+      a(href="/contact") kontakt
+    .nav-contact
+      img(class ="phon-icon" src="images/phone-icon.svg")
+      a(href="tel:724492189" style="font-size:18px; margin:auto;") 724 492 189
+.overlay(id="overlay")     
+

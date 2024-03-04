@@ -1,0 +1,231 @@
+*{
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: nano;
+	src: url("/fonts/nano/NotoSans-Regular.ttf");
+}
+
+@font-face {
+	font-family: asc;
+	src: url("/fonts/asc/AlegreyaSansSC-Light.ttf");
+
+}
+a{
+	color:inherit;
+	text-decoration: none;
+}
+
+body{
+	margin:0;
+	width:100%;
+	background: #ffffff;
+	font-family: asc;
+	font-size: larger;
+	overflow-x: hidden;
+}
+
+figure{
+	margin:0;
+}
+
+.container{
+	width: 100%;
+    margin: auto;
+    box-shadow: inset 0 0 10px 0 #000000bf;
+    min-height: 90vh;
+    padding: 0 5%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.images {
+    display: flex;
+	width:100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.img-container {
+	position: relative;
+    /* ustawienie proporcji 1:1 */
+	width:25%;
+	height: 20vw;
+    overflow: hidden;
+	background-color: #1f1f1f ;
+	background-image: url("/img/logo/Vinyl_Craft_logo.png");
+	background-position: center;
+    background-size: contain;
+    border: 2px solid #fff;
+
+}
+
+.img-container > img {
+    width: 100%;
+    height: 100%;
+    /* ustawienie object-fit na contain */
+    object-fit: cover;
+    transition: transform .1s linear;
+	cursor: pointer;
+}
+.img-container > img:hover {
+    transform: scale(1.03);
+}
+
+.section-title{
+	font-size: x-large;
+    background: #0000;
+    color: #000;
+    padding: 10px;
+    border-bottom: 2px solid #b08c68;
+	margin-bottom: 5px;
+}
+
+.footer{
+	width:100%;
+	height:5vh;
+	line-height: 5vh;
+	background: rgb(41, 41, 41);
+	color:#fff;
+	text-align: center;
+	font-size: smaller;
+	font-weight: lighter;
+	box-shadow: 0 0 4vh 0 rgba(0, 0, 0, 0.678);
+}
+
+
+.slider{
+	width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000eb;
+	display: none;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.slider-title{
+	flex: 1;
+    text-align: left;
+    padding: 5px 10px;
+    font-size: xx-large;
+    position: absolute;
+    top: 0;
+    background: #fff;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.slider-left,.slider-right {
+	height: 50%;
+	bottom:25%;
+    width: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: xxx-large;
+    cursor: pointer;
+    transition: all linear 150ms;
+	position: absolute;
+	color:#fff;
+	background: #00000024;
+}
+
+.slider-left:hover,.slider-right:hover{
+	
+	background: #0000005b;
+}
+
+.slider-left {
+    left: 0;	
+	border-right:2px solid #fff;
+	box-shadow: -8px 0px 9px 0px #000;
+}
+
+.slider-right {
+    right: 0;	
+	border-left:2px solid #fff;
+	box-shadow: 8px 0px 9px 0px #000;
+}
+
+
+.slider-left:before {
+	content: "";
+    position: absolute;
+    color: #fff;
+    border-top: 10px solid transparent;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+  }
+
+  .slider-right:before {
+	content: "";
+    position: absolute;
+    color: #fff;
+    border-top: 10px solid transparent;
+    border-left: 10px solid #fff;
+    border-bottom: 10px solid transparent;
+  }
+
+.slider-close{
+	width: 4vw;
+    height: 4vw;
+    position: absolute;
+    right: 1vw;
+    top: 1vw;
+    color: #ffffffb5;
+    font-size: small;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.slider-images{
+	position: relative;
+	min-height: 200px;
+}
+
+.slider-image{
+	min-height: 200px;
+}
+
+.slider-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+	
+}
+
+
+
+@media only screen and (max-width:1200px) {
+	.img-container {
+		width: 33.333%;
+		height: calc(28.33vw);
+	}
+}
+
+
+
+@media only screen and (max-width: 800px) {
+	.img-container {
+		width: 50%;
+		height:calc(45vw)
+	}
+
+	.slider{
+		background: #000000;
+	}
+
+	.slider-title{		
+		font-size: large;
+	}
+}
